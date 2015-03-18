@@ -8,7 +8,8 @@ function UserController () {
   vm.email = "";
   vm.name = "";
   vm.street = "";
-  vm.city
+  vm.city = "";
+  vm.birthday = "";
 
   // vm.addUser = function () {
 

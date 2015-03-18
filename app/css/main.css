@@ -11,10 +11,6 @@ h1{
   float: right;
 }
 
-button {
-  background-color: #f55649;
-}
-
 .birthday__highlight {
   background-color: #f55649;
   width: 350px;
@@ -34,23 +30,35 @@ button {
   color: white;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  height: 200px;
+  height: 145px;
   border-radius: 1em;
-  margin: 10px;
-  padding-top: 50px;
+/*  margin-right: 10px;
+  margin-left: 10px;*/
+  margin-bottom: 10px;
+  padding-top: 20px;
+}
+
+.smallbox1 {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.smallbox3{
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .smallbox p {
   font-size: 2em;
 }
 
-.smallbox:first-child {
+/*.smallbox:first-child {
   margin-left: 4%;
 }
 
 .smallbox:last-child {
   margin-right: 4%;
-}
+}*/
 
 .smallbox:hover {
   background-color: #fcc6c2;
