@@ -4,8 +4,8 @@ angular
     $routeProvider
       .when('/login', {
         templateUrl: 'app/login.html',
-        controller: 'LoginController',
-        controllerAs: 'login'
+        controller: 'UserController',
+        controllerAs: 'user'
       })
       .when('/home', {
         templateUrl: 'app/home.html'

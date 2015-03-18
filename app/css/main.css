@@ -63,3 +63,52 @@ button {
 .present {
   font-size: 15em;
 }
+
+.register__form {
+  float: right;
+  width: 40%;
+}
+
+.envelope {
+  float: left;
+  margin: auto;
+  width: 55%;
+  height: 300px;
+  border: 1px solid black;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #f55649;
+  border-radius: .5em;
+}
+
+.return-address {
+  float: left;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.stamp {
+  float: right;
+  width: 80px;
+  height: 80px;
+  background-color: #f55649;
+  color: white;
+  margin-top: 5px;
+  margin-right: 5px;
+  border-radius: .5em;
+  padding-top: 15px;
+  text-align:center;
+}
+
+.login__user--name {
+  margin-top: 20%;
+}
+
+.register__header {
+  width: 100%;
+  text-align: center;
+}
+
+.register__instructions {
+  font-family: 'Open Sans', sans-serif;
+}
