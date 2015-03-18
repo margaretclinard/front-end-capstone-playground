@@ -8,7 +8,9 @@ angular
         controllerAs: 'user'
       })
       .when('/home', {
-        templateUrl: 'app/home.html'
+        templateUrl: 'app/home.html',
+        controller: 'HomeController',
+        controllerAs: 'home'
       })
       .when('/birthdays', {
         templateUrl: 'app/birthdays.html'
