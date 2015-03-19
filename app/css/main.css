@@ -10,13 +10,6 @@
 
 #f55649 - current coral*/
 
-
-.login__title {
-  font-family: 'Poiret One', 'Open Sans', cursive;
-  font-size: 3em;
-  font-weight: bold;
-}
-
 h1{
   font-family: 'Poiret One', 'Open Sans', cursive;
   color: #f55649;
@@ -145,7 +138,7 @@ h1{
 
 .homepage__footer {
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poiret One', sans-serif;
 /*  font-weight: bold;*/
   font-size: 3em;
   color: #f55649;
@@ -154,10 +147,19 @@ h1{
 /***** WISHLIST PAGE *****/
 
 .wishlist p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poiret One', sans-serif;
 /*  font-weight: bold;*/
-  font-size: 3em;
-  color: #f55649;
+  font-size: 2em;
+  color: #D5C2A4;
+  margin-left: 10px;
+}
+
+.product {
+  width: 20%;
+  margin: 10px;
+  border-radius: 1em;
+  background-color: #f55649;
+  display: inline-block;
 }
 
 /***** BIRTHDAYS PAGE ******/
