@@ -1,0 +1,90 @@
+<div class="register">
+  <div class="register__header">
+    <div class="register__instructions">
+<!--       <p>Create and share wishlists with your friends.</p>
+      <p>Stay connected with up-to-date address information.</p> -->
+      <p>You're one step away from being <span style="font-family: 'Dancing Script', cursive; font-size: 1.5em; color: #f55649;">presently surprised</span>...</p>
+    </div>
+  </div>
+
+  <div class="envelope">
+    <div class="return-address">Your BFF</div>
+    <div class="stamp"><span class="glyph glyphicon glyphicon-heart-empty" aria-hidden="true"></span></div>
+    <p class="login__user--name">{{user.name}}</p>
+    <p class="login__user">{{user.street}}</p>
+    <p class="login__user">{{user.city}}</p>
+  </div>
+
+  <div class="register__form">
+    <form>
+      <div class="form-group">
+        <label class="control-label">Full Name</label>
+        <input class="form-control" ng-model="user.name" required>
+      </div>
+      <div class="form-group">
+        <label>Street Address</label>
+        <input class="form-control" ng-model="user.street">
+      </div>
+      <div class="form-group">
+        <label>City, State, Zip</label>
+        <input class="form-control" ng-model="user.city">
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox">Keep address private?
+        </label>
+      </div>
+      <div class="form-group">
+        <label>Birthday</label>
+          <select class="form-control col-md-2" ng-model="user.birthday">
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+          </select>
+          <select class="form-control" ng-model="user.birthday">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+          </select>
+      </div>
+      <button type="submit" class="btn btn-default"><a href="/#/home">Register</a></button>
+    </form>
+  </div>
+</div>

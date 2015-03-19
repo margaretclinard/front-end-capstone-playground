@@ -2,7 +2,7 @@ angular
   .module('ps')
   .controller('UserController', UserController);
 
-function UserController () {
+function UserController ($http) {
   var vm = this;
 
   vm.email = "";
@@ -11,7 +11,11 @@ function UserController () {
   vm.city = "";
   vm.birthday = "";
 
-  // vm.addUser = function () {
-
+  // vm.login = function () {
+  //   $http
+  //     .post(BASE_URL + '/users.json')
+  //     .success(function (res) {
+  //       cb(res);
+  //     });
   // }
 };
