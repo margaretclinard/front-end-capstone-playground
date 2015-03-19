@@ -1,2 +1,2 @@
 angular
-  .module('ps', ['ngRoute', 'mgcrea.ngStrap']);
+  .module('ps', ['ngRoute']);
