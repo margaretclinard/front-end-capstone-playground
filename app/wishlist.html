@@ -1,15 +1,57 @@
 <div class="login__header">
-  <h1>Presently Surprised</h1>
+  <h1>presently</h1>
 </div>
 <ol class="breadcrumb">
   <li><a href="/#/home">Home</a></li>
   <li class="active">My Wants</li>
 </ol>
 <div class="wishlist">
-  <p>my wants</p>
-  <form>
-    <input type="text">
+  <form ng-submit="wish.submit()">
+    <label>Item URL:</label>
+    <input type="text" ng-model="wish.newWish.item">
+    <label>Item Price:</label>
+    <input ng-model="wish.newWish.price">
+    <label>Priority:</label>
+      <select ng-model="wish.newWish.priority">
+        <option>Need it</option>
+        <option>Love it</option>
+        <option>Staple Product - could always use!</option>
+        <option>In my wildest dreams</option>
+      </select>
     <input type="submit" class="btn btn-default">
   </form>
+
+  <h3>Staple Products:</h3>
+  <div class="product" ng-repeat="w in wish">
+    <p>{{w.priority}}</p>
+    <p>Item: {{w.item}}</p>
+    <p>Price: {{w.price}}</p>
+  </div>
+  <div class="product" ng-repeat="w in wish">
+    <p>{{w.priority}}</p>
+    <p>Item: {{w.item}}</p>
+    <p>Price: {{w.price}}</p>
+  </div>
+
+  <h3>Need it:</h3>
+  <div class="product" ng-repeat="w in wish">
+    <p>{{w.priority}}</p>
+    <p>Item: {{w.item}}</p>
+    <p>Price: {{w.price}}</p>
+  </div>
+
+  <h3>Love it:</h3>
+  <div class="product" ng-repeat="w in wish">
+    <p>{{w.priority}}</p>
+    <p>Item: {{w.item}}</p>
+    <p>Price: {{w.price}}</p>
+  </div>
+
+  <h3>In my wildest dreams:</h3>
+  <div class="product" ng-repeat="w in wish">
+    <p>{{w.priority}}</p>
+    <p>Item: {{w.item}}</p>
+    <p>Price: {{w.price}}</p>
+  </div>
 
 </div>
