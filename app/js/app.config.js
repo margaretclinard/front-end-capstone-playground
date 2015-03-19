@@ -18,10 +18,14 @@ angular
         controllerAs: 'home'
       })
       .when('/birthdays', {
-        templateUrl: 'app/birthdays.html'
+        templateUrl: 'app/birthdays.html',
+        controller: 'BdayController',
+        controllerAs: 'bday'
       })
       .when('/wishlist', {
-        templateUrl: 'app/wishlist.html'
+        templateUrl: 'app/wishlist.html',
+        controller: 'WishController',
+        controllerAs: 'wish'
       })
       .when('/invite', {
         templateUrl: 'app/invite.html'

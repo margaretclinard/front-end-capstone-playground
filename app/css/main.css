@@ -12,13 +12,13 @@
 
 
 .login__title {
-  font-family: 'Poiret One', cursive;
+  font-family: 'Poiret One', 'Open Sans', cursive;
   font-size: 3em;
   font-weight: bold;
 }
 
 h1{
-  font-family: 'Poiret One', cursive;
+  font-family: 'Poiret One', 'Open Sans', cursive;
   color: #f55649;
   font-size: 2.5em;
   font-weight: bold;

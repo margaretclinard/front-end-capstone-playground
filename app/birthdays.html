@@ -1,5 +1,21 @@
+<div class="login__header">
+  <h1>Presently Surprised</h1>
+</div>
 <ol class="breadcrumb">
   <li><a href="/#/home">Home</a></li>
   <li class="active">Birthdays</li>
 </ol>
-<h2>Test</h2>
+
+<div class="birthdays">
+  <h2>March Birthdays</h2>
+  <table>
+    <tbody>
+      <tr ng-repeat="b in bday.data">
+        <td>{{b.birthday}}</td>
+        <td>{{b.name}}</td>
+        <td>{{b.address}}</td>
+        <td><button class="btn btn-default">Wish List</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
