@@ -7,6 +7,11 @@ angular
         controller: 'UserController',
         controllerAs: 'user'
       })
+      .when('/register', {
+        templateUrl: 'app/register.html',
+        controller: 'UserController',
+        controllerAs: 'user'
+      })
       .when('/home', {
         templateUrl: 'app/home.html',
         controller: 'HomeController',
