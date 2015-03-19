@@ -28,6 +28,7 @@ h1{
   float: right;
 }
 
+/*****  HOME PAGE ******/
 .birthday__highlight {
   background-color: #f55649;
   width: 350px;
@@ -89,6 +90,18 @@ h1{
   font-size: 15em;
 }
 
+/*****  REGISTRATION PAGE *****/
+.register__header {
+  width: 100%;
+  text-align: center;
+}
+
+.register__instructions {
+  font-family: 'Poiret One', cursive, 'Open Sans', sans-serif;
+  font-size: 3em;
+  color: #f55649;
+}
+
 .register__form {
   float: right;
   width: 40%;
@@ -130,21 +143,32 @@ h1{
   margin-top: 20%;
 }
 
-.register__header {
-  width: 100%;
-  text-align: center;
-}
-
-.register__instructions {
-  font-family: 'Poiret One', cursive, 'Open Sans', sans-serif;
-  font-size: 3em;
-  color: #f55649;
-}
-
 .homepage__footer {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 /*  font-weight: bold;*/
   font-size: 3em;
   color: #f55649;
+}
+
+/***** WISHLIST PAGE *****/
+
+.wishlist p {
+  font-family: 'Open Sans', sans-serif;
+/*  font-weight: bold;*/
+  font-size: 3em;
+  color: #f55649;
+}
+
+/***** BIRTHDAYS PAGE ******/
+
+.birthdays {
+  font-family: 'Poiret One', sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  color: #f55649;
+}
+
+.birthdays h2 {
+  font-family: 'Open Sans', sans-serif;
 }
