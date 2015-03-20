@@ -11,15 +11,18 @@ function WishController ($http) {
   $http
     .get('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/wishlist.json')
     .success(function (data){
-      console.log(data);
+      vm.newWish = data;
     });
 
   vm.submit = function () {
     $http
       .post('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/wishlist.json', vm.newWish)
       .success(function (data) {
-        console.log(data.name);
-        // $location.path('/');
+        $http
+          .get('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/wishlist.json')
+          .success(function (data){
+            vm.newWish = data;
+          });
       });
 
     vm.newWish= {};

@@ -30,6 +30,7 @@ function AuthController($rootScope, $http, $scope, $location, authFactory) {
       } else {
         console.log('User created successfully', authData);
         vm.login();
+        delete vm.user['password'];
         $http
           .post('https://presently-surprised.firebaseio.com/users/' + authData.uid + '/profile.json', vm.user)
           .success(function (data) {
