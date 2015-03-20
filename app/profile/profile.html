@@ -6,9 +6,9 @@
   <li class="active">My Profile</li>
 </ol>
 
-<div class="user-address">
-  <p></p>
-  <p></p>
-  <p></p>
-  <p></p>
+<div class="user-address" ng-repeat="p in profile.user">
+  <p>{{p.name}}</p>
+  <p>{{p.email}}</p>
+  <p>{{p.street}}</p>
+  <p>{{p.city}}</p>
 </div>
