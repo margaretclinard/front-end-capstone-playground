@@ -2,7 +2,7 @@ angular
   .module('ps')
   .factory('authFactory', authFactory)
 
-function authFactory($http) {
+function authFactory() {
   return {
     isLoggedIn: function (){
       var fb = new Firebase('https://presently-surprised.firebaseio.com');

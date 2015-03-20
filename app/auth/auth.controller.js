@@ -2,7 +2,7 @@ angular
   .module('ps')
   .controller('AuthController', AuthController)
 
-function AuthController($rootScope, $scope, $location, authFactory) {
+function AuthController($rootScope, $http, $scope, $location, authFactory) {
   var vm = this;
 
   vm.user = {};
@@ -23,13 +23,19 @@ function AuthController($rootScope, $scope, $location, authFactory) {
   vm.register = function () {
     authFactory.register(vm.user, function (err, authData) {
       if (err && err.code === 'EMAIL_TAKEN') {
-        console.log('Error creating user:', err);
+        console.log('Already a user:', err);
         vm.login();
       } else if (err) {
         console.log('Error creating user:', err)
       } else {
         console.log('User created successfully', authData);
         vm.login();
+        $http
+          .post('https://presently-surprised.firebaseio.com/users/' + authData.uid + '/profile.json', vm.user)
+          .success(function (data) {
+            console.log(data.name);
+            // $location.path('/');
+          });
       }
     });
   };

@@ -8,6 +8,12 @@ function WishController ($http) {
 
   vm.newWish = {};
 
+  $http
+    .get('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/wishlist.json')
+    .success(function (data){
+      console.log(data);
+    });
+
   vm.submit = function () {
     $http
       .post('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/wishlist.json', vm.newWish)
@@ -18,10 +24,4 @@ function WishController ($http) {
 
     vm.newWish= {};
   }
-
-  // $http
-  //   .get('https://presently-surprised.firebaseio.com/')
-  //   .success(function (data){
-  //     console.log(data)
-  //   })
 }
