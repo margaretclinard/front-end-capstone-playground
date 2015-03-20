@@ -3,7 +3,7 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/login', {
-        templateUrl: 'app/js/auth/login.html',
+        templateUrl: 'app/auth/login.html',
         controller: 'AuthController',
         controllerAs: 'auth',
         // resolve: {
@@ -15,7 +15,7 @@ angular
         // }
       })
       .when('/register', {
-        templateUrl: 'app/js/auth/register.html',
+        templateUrl: 'app/auth/register.html',
         controller: 'AuthController',
         controllerAs: 'auth',
         // resolve: {

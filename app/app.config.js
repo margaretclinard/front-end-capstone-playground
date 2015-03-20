@@ -3,24 +3,24 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/home', {
-        templateUrl: 'app/home.html',
+        templateUrl: 'app/profile/home.html',
         controller: 'HomeController',
         controllerAs: 'home'
       })
       .when('/birthdays', {
-        templateUrl: 'app/birthdays.html',
+        templateUrl: 'app/birthdays/bdays.html',
         controller: 'BdayController',
         controllerAs: 'bday'
       })
       .when('/wishlist', {
-        templateUrl: 'app/wishlist.html',
+        templateUrl: 'app/profile/wishlist.html',
         controller: 'WishController',
         controllerAs: 'wish'
       })
       .when('/invite', {
-        templateUrl: 'app/invite.html'
+        templateUrl: 'app/profile/invite.html'
       })
       .when('/profile', {
-        templateUrl: 'app/profile.html'
+        templateUrl: 'app/profile/profile.html'
       })
   })

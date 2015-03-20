@@ -22,36 +22,17 @@
   </form>
 
   <h3>Staple Products:</h3>
-  <div class="product" ng-repeat="w in wish">
-    <p>{{w.priority}}</p>
-    <p>Item: {{w.item}}</p>
-    <p>Price: {{w.price}}</p>
-  </div>
-  <div class="product" ng-repeat="w in wish">
+  <div class="product" ng-repeat="(id, w) in wish.users">
     <p>{{w.priority}}</p>
     <p>Item: {{w.item}}</p>
     <p>Price: {{w.price}}</p>
   </div>
 
   <h3>Need it:</h3>
-  <div class="product" ng-repeat="w in wish">
-    <p>{{w.priority}}</p>
-    <p>Item: {{w.item}}</p>
-    <p>Price: {{w.price}}</p>
-  </div>
 
   <h3>Love it:</h3>
-  <div class="product" ng-repeat="w in wish">
-    <p>{{w.priority}}</p>
-    <p>Item: {{w.item}}</p>
-    <p>Price: {{w.price}}</p>
-  </div>
 
   <h3>In my wildest dreams:</h3>
-  <div class="product" ng-repeat="w in wish">
-    <p>{{w.priority}}</p>
-    <p>Item: {{w.item}}</p>
-    <p>Price: {{w.price}}</p>
-  </div>
+
 
 </div>
