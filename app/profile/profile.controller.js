@@ -13,4 +13,12 @@ function ProfileController ($http) {
     .success(function (data){
       vm.user = data;
     })
+
+  // vm.update = function () {
+  //   $http
+  //     .put('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/profile.json', vm.user)
+  //     .success(function (res){
+  //       console.log(res);
+  //     })
+  // }
 }

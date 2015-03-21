@@ -22,6 +22,14 @@ h1{
 }
 
 /*****  HOME PAGE ******/
+.welcome {
+  font-family: 'Poiret One', sans-serif;
+  font-size: 2em;
+  color: #f55649;
+  font-weight: bold;
+  text-align: center;
+}
+
 .birthday__highlight {
   background-color: #f55649;
   width: 350px;
@@ -43,8 +51,6 @@ h1{
   text-align: center;
   height: 145px;
   border-radius: 1em;
-/*  margin-right: 10px;
-  margin-left: 10px;*/
   margin-bottom: 10px;
   padding-top: 20px;
 }
@@ -146,10 +152,21 @@ h1{
 
 /***** WISHLIST PAGE *****/
 
-.wishlist p {
-  font-family: 'Poiret One', sans-serif;
-/*  font-weight: bold;*/
+.wishlist__fav {
   font-size: 2em;
+  margin-left: 75%;
+  color: lightgrey;
+}
+
+.wishlist__fav:hover {
+  margin-left: 75%;
+  color: lightyellow;
+}
+
+.wishlist p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
   color: #D5C2A4;
   margin-left: 10px;
 }
@@ -160,8 +177,14 @@ h1{
   border-radius: 1em;
   background-color: #f55649;
   display: inline-block;
+  border: 1px solid #D5C2A4;
+  display: inline-block;
+  text-align: center;
 }
 
+.wishlist__remove {
+  color: red;
+}
 /***** BIRTHDAYS PAGE ******/
 
 .birthdays {
@@ -173,4 +196,118 @@ h1{
 
 .birthdays h2 {
   font-family: 'Open Sans', sans-serif;
+}
+
+
+/****** MEDIA QUERIES *******/
+@media screen and (max-width: 1000px) {
+  .envelope {
+    display: none;
+  }
+
+  .register__form {
+    float: none;
+    margin: auto;
+  }
+
+  .register__instructions {
+    font-family: 'Poiret One', cursive, 'Open Sans', sans-serif;
+    font-size: 2em;
+    color: #f55649;
+  }
+
+  .birthday__highlight {
+    background-color: #f55649;
+    width: 275px;
+    height: 210px;
+    padding-top: 5px;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 1em;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #D5C2A4;
+  }
+
+  .birthday__highlight:hover {
+    background-color: #fcc6c2;
+  }
+
+  .smallbox {
+    background-color: #f55649;
+    color: #D5C2A4;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    height: 105px;
+    border-radius: 1em;
+    margin-bottom: 10px;
+    padding-top: 3px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .smallbox p {
+    font-size: 1.5em;
+  }
+
+  .smallbox:hover {
+    background-color: #fcc6c2;
+  }
+
+  .glyph {
+    font-size: 4em;
+  }
+
+  .present {
+    font-size: 5em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .birthday__highlight {
+    background-color: #f55649;
+    padding-top: 0px;
+    width: 60%;
+    height: 30%;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 1em;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #D5C2A4;
+  }
+
+  .birthday__highlight:hover {
+    background-color: #fcc6c2;
+  }
+
+  .smallbox {
+    padding-top: 5px;
+    background-color: #f55649;
+    color: #D5C2A4;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    height: 50px;
+    border-radius: 1em;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .smallbox p {
+    font-size: 1em;
+  }
+
+  .smallbox:hover {
+    background-color: #fcc6c2;
+  }
+
+  .glyph {
+    font-size: 1em;
+  }
+
+  .present {
+    font-size: 3em;
+  }
+
 }

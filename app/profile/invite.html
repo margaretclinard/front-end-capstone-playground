@@ -1,7 +1,36 @@
-<div class="login__header">
-  <h1>presently</h1>
-</div>
+<div ng-include="'app/layout/header.html'"></div>
 <ol class="breadcrumb">
   <li><a href="/#/home">Home</a></li>
   <li class="active">Invite Friends</li>
 </ol>
+
+<div class="row">
+  <div class="col-lg-4">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for friends..." ng-model="friendFilterQuery">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+      </span>
+    </div>
+  </div>
+  <p>To keep track of birthdays, wish lists, addresses and more, send your friends a request.</p>
+  <div class="search-results">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Send Friend Request</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="i in invite.users
+          | filter:friendFilterQuery
+          | objToArr">
+          <td>{{i.profile}}</td>
+          <td>{{i._id}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

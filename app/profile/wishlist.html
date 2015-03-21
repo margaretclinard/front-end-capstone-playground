@@ -1,29 +1,32 @@
-<div class="login__header">
-  <h1>presently</h1>
-</div>
+<div ng-include="'app/layout/header.html'"></div>
 <ol class="breadcrumb">
   <li><a href="/#/home">Home</a></li>
   <li class="active">My Wants</li>
 </ol>
+<p>Make Wish List Categories -- drag and drop?</p>
 <div class="wishlist">
   <form ng-submit="wish.submit()">
+    <label>Item Name:</label>
+    <input type="text" ng-model="wish.newWish.itemName" required>
     <label>Item URL:</label>
-    <input type="text" ng-model="wish.newWish.item">
+    <input type="url" ng-model="wish.newWish.itemUrl" required>
     <label>Item Price:</label>
-    <input ng-model="wish.newWish.price">
-    <label>Priority:</label>
-      <select ng-model="wish.newWish.priority">
+    <input ng-model="wish.newWish.price" required>
+<!--     <label>Priority:</label>
+      <select ng-model="wish.newWish.priority" required>
         <option>Need it</option>
         <option>Love it</option>
         <option>In my wildest dreams</option>
-      </select>
+      </select> -->
     <input type="submit" class="btn btn-default">
   </form>
 
   <div class="product" ng-repeat="w in wish.newWish">
-    <p>{{w.priority}}</p>
-    <p>Item: {{w.item}}</p>
-    <p>Price: {{w.price}}</p>
+    <span class="wishlist__fav glyph glyphicon glyphicon-star" aria-hidden="true"></span>
+<!--     <p>{{w.priority}}</p> -->
+    <p><a href="{{w.itemUrl}}" target="_blank">{{w.itemName}}</a></p>
+    <p>${{w.price}}</span></p>
+    <button class="wishlist__remove btn btn-default"><span class="glyphicon glyphicon-remove"></span></button>
   </div>
 
 

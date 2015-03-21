@@ -2,8 +2,9 @@ angular
   .module('ps')
   .controller('HomeController', HomeController);
 
-function HomeController () {
+function HomeController ($http) {
   var vm = this;
+  var fb = new Firebase('https://presently-surprised.firebaseio.com/');
 
   var currentDate = new Date();
   var month = [
@@ -22,4 +23,12 @@ function HomeController () {
   ];
 
   vm.month = month[currentDate.getMonth()];
+
+  vm.user = {};
+
+  $http
+    .get('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/profile.json')
+    .success(function (data){
+      vm.user = data;
+    });
 }

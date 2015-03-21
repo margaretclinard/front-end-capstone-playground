@@ -18,11 +18,18 @@ angular
         controllerAs: 'wish'
       })
       .when('/invite', {
-        templateUrl: 'app/profile/invite.html'
+        templateUrl: 'app/profile/invite.html',
+        controller: 'InviteController',
+        controllerAs: 'invite'
       })
       .when('/profile', {
         templateUrl: 'app/profile/profile.html',
         controller: 'ProfileController',
         controllerAs: 'profile'
+      })
+      .when('', {
+        templateUrl: 'app/layout/header.html',
+        controller: 'AuthController',
+        controllerAs: 'auth'
       })
   })
