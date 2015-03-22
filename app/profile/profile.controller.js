@@ -14,11 +14,12 @@ function ProfileController ($http) {
       vm.user = data;
     })
 
-  // vm.update = function () {
-  //   $http
-  //     .put('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/profile.json', vm.user)
-  //     .success(function (res){
-  //       console.log(res);
-  //     })
-  // }
+  vm.update = function (id) {
+    $http
+      .patch('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/profile.json', vm.user)
+      .success(function (res){
+        vm.user = res;
+      })
+    $('#editModal').modal('hide')
+  }
 }
