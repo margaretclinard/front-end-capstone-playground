@@ -41,12 +41,12 @@
 
 <!-- WISHLIST -->
 <div class="wishlist">
-  <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">
-   Add Item
+  <button type="button" class="btn btn-default btn-lg col-md-12 col-sm-12" data-toggle="modal" data-target="#myModal">
+   <span style="font-family: 'Dancing Script', cursive; font-size: 1.5em; color: #f55649;">Add Item</span>
   </button>
   <p>sort by: Favorite | Price</p>
   <div class="product" ng-repeat="(id, w) in wish.newWish">
-    <span class="wishlist__fav glyph glyphicon glyphicon-star" aria-hidden="true"></span>
+    <span ng-click="wish.fav(id)" class="wishlist__fav glyph glyphicon glyphicon-star" ng-class="{fav: w.favorite[id] === true}" aria-hidden="true"></span>
 <!--     <p>{{w.priority}}</p> -->
     <img class="wishlist__image" ng-src="{{w.itemImg}}">
     <p><a href="{{w.itemUrl}}" target="_blank">{{w.itemName}}</a></p>

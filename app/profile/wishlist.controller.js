@@ -29,12 +29,25 @@ function WishController ($http) {
     vm.newWish= {};
   }
 
-  vm.deleteWish = function () {
-    console.log('clicked')
+  vm.deleteWish = function (id) {
     $http
       .delete('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/wishlist/' + id + '.json')
-      .success(function (id) {
-        console.log(id)
+      .success(function (data) {
+        $http
+          .get('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/wishlist.json')
+          .success(function (data){
+            vm.newWish = data;
+          });
+      });
+  }
+
+  vm.fav = function (uuid) {
+    vm.newWish.fav = {'favorite': true };
+
+    $http
+      .post('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/wishlist/' + uuid + '.json', vm.newWish.fav)
+      .success(function (data) {
+        console.log(data);
       });
   }
 }
