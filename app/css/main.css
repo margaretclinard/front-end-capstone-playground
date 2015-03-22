@@ -171,20 +171,20 @@ h1{
 
 .wishlist p {
   font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1em;
   color: #D5C2A4;
   margin-left: 10px;
 }
 
 .product {
   width: 20%;
+  height: 20%;
   margin: 25px;
   border-radius: 1em;
-  display: inline-block;
   border: 1px solid #f55649;
   display: inline-block;
   text-align: center;
+  background-color: #f55649;
 }
 
 .wishlist__remove {
@@ -207,13 +207,28 @@ h1{
 
 /****** MEDIA QUERIES *******/
 @media screen and (max-width: 1000px) {
+  .wishlist__fav, .fav {
+    margin-left: 70%;
+    color: lightgrey;
+    margin-top: 5px;
+  }
+
+  .wishlist__fav:hover {
+    margin-left: 70%;
+    color: #FDAB00;
+    margin-top: 5px;
+  }
+
+  .wishlist__add-item {
+    width: 100%;
+  }
+
   .product {
-    width: 90%;
+    width: 45%;
     margin: 10px;
     border-radius: 1em;
     display: inline-block;
     border: 1px solid #f55649;
-    display: inline-block;
     text-align: center;
   }
 
@@ -280,15 +295,32 @@ h1{
 }
 
 @media screen and (max-width: 500px) {
+  .wishlist__fav, .fav {
+    font-size: 2em;
+    margin-left: 80%;
+    color: lightgrey;
+    margin-top: 5px;
+  }
+
+  .wishlist__fav:hover {
+    margin-left: 80%;
+    color: #FDAB00;
+    margin-top: 5px;
+  }
+
+  .wishlist__add-item {
+    width: 100%;
+  }
+
   .product {
     width: 90%;
     margin: 10px;
     border-radius: 1em;
-    display: inline-block;
+    display: block;
     border: 1px solid #f55649;
-    display: inline-block;
     text-align: center;
   }
+
   .birthday__highlight {
     background-color: #f55649;
     padding-top: 0px;
