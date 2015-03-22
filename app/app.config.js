@@ -32,4 +32,7 @@ angular
         controller: 'AuthController',
         controllerAs: 'auth'
       })
+      .when('/about', {
+        templateUrl: 'app/layout/about.html'
+      })
   })
