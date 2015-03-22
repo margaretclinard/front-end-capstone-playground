@@ -89,6 +89,13 @@ h1{
   font-size: 15em;
 }
 
+.homepage__footer {
+  text-align: center;
+  font-family: 'Poiret One', sans-serif;
+  font-size: 2em;
+  color: #f55649;
+}
+
 /*****  REGISTRATION PAGE *****/
 .register__header {
   width: 100%;
@@ -142,22 +149,14 @@ h1{
   margin-top: 20%;
 }
 
-.homepage__footer {
-  text-align: center;
-  font-family: 'Poiret One', sans-serif;
-/*  font-weight: bold;*/
-  font-size: 3em;
-  color: #f55649;
-}
-
 /***** WISHLIST PAGE *****/
 
 .wishlist__image {
-  width: 100px;
-  height: 100px;
+  max-width: 100px;
+  max-height: 100px;
 }
 
-.wishlist__fav {
+.wishlist__fav, .fav {
   font-size: 2em;
   margin-left: 80%;
   color: lightgrey;
@@ -180,7 +179,7 @@ h1{
 
 .product {
   width: 20%;
-  margin: 10px;
+  margin: 25px;
   border-radius: 1em;
   display: inline-block;
   border: 1px solid #f55649;
@@ -208,6 +207,16 @@ h1{
 
 /****** MEDIA QUERIES *******/
 @media screen and (max-width: 1000px) {
+  .product {
+    width: 90%;
+    margin: 10px;
+    border-radius: 1em;
+    display: inline-block;
+    border: 1px solid #f55649;
+    display: inline-block;
+    text-align: center;
+  }
+
   .envelope {
     display: none;
   }
@@ -271,6 +280,15 @@ h1{
 }
 
 @media screen and (max-width: 500px) {
+  .product {
+    width: 90%;
+    margin: 10px;
+    border-radius: 1em;
+    display: inline-block;
+    border: 1px solid #f55649;
+    display: inline-block;
+    text-align: center;
+  }
   .birthday__highlight {
     background-color: #f55649;
     padding-top: 0px;
