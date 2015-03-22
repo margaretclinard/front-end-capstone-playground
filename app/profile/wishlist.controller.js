@@ -23,8 +23,18 @@ function WishController ($http) {
           .success(function (data){
             vm.newWish = data;
           });
+        $('#myModal').modal('hide')
       });
 
     vm.newWish= {};
+  }
+
+  vm.deleteWish = function () {
+    console.log('clicked')
+    $http
+      .delete('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/wishlist/' + id + '.json')
+      .success(function (id) {
+        console.log(id)
+      });
   }
 }
