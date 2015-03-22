@@ -10,7 +10,7 @@
   <div class="envelope">
     <div class="return-address">Your BFF</div>
     <div class="stamp"><span class="glyph glyphicon glyphicon-heart-empty" aria-hidden="true"></span></div>
-    <p class="login__user--name">{{auth.user.name}}</p>
+    <p class="login__user--name"><span style="font-family: 'Dancing Script', cursive; font-size: 2em; color: #f55649;">{{auth.user.name}}</span></p>
     <p class="login__user">{{auth.user.street}}</p>
     <p class="login__user">{{auth.user.city}}</p>
   </div>
@@ -37,11 +37,11 @@
         <label>City, State, Zip</label>
         <input class="form-control" placeholder="Enter City, State, Zip"  ng-model="auth.user.city" required>
       </div>
-      <div class="checkbox">
+<!--       <div class="checkbox">
         <label>
           <input type="checkbox" ng-model"auth.user.private">Keep address private?
         </label>
-      </div>
+      </div> -->
       <div class="form-group">
         <label>Birthday</label>
           <input type="date" ng-model="auth.user.birthday">
