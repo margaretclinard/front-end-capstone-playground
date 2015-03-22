@@ -32,7 +32,7 @@ h1{
 
 .birthday__highlight {
   background-color: #f55649;
-  width: 350px;
+  width: 365px;
   height: 300px;
   border-radius: 1em;
   text-align: center;
@@ -152,15 +152,22 @@ h1{
 
 /***** WISHLIST PAGE *****/
 
+.wishlist__image {
+  width: 100px;
+  height: 100px;
+}
+
 .wishlist__fav {
   font-size: 2em;
-  margin-left: 75%;
+  margin-left: 80%;
   color: lightgrey;
+  margin-top: 5px;
 }
 
 .wishlist__fav:hover {
-  margin-left: 75%;
-  color: lightyellow;
+  margin-left: 80%;
+  color: #FDAB00;
+  margin-top: 5px;
 }
 
 .wishlist p {
@@ -175,15 +182,15 @@ h1{
   width: 20%;
   margin: 10px;
   border-radius: 1em;
-  background-color: #f55649;
   display: inline-block;
-  border: 1px solid #D5C2A4;
+  border: 1px solid #f55649;
   display: inline-block;
   text-align: center;
 }
 
 .wishlist__remove {
   color: red;
+  margin-bottom: 5px;
 }
 /***** BIRTHDAYS PAGE ******/
 
