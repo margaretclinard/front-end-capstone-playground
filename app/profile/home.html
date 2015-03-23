@@ -3,9 +3,9 @@
   <li class="active">Home</li>
 </ol>
 
-<div class="row welcome" ng-repeat="h in home.user">
+<div class="row welcome">
   <div class="col-md-12">
-    <p>Welcome, <span style="font-family: 'Dancing Script', cursive; font-size: 1.5em; color: #f55649;">{{h.firstName}}</span>.</p>
+    <p>Welcome, <span style="font-family: 'Dancing Script', cursive; font-size: 1.5em; color: #f55649;">{{home.user.firstName}}</span>.</p>
   </div>
 </div>
 
@@ -27,7 +27,7 @@
   </a>
 
 <!-- Angular Route to Profile with edit and save views -->
-  <a href="/#/invite">
+  <a href="/#/friends">
     <div class="smallbox smallbox2 col-md-3">
       <span class="glyph glyphicon glyphicon-piggy-bank" aria-hidden="true"></span>
       <p>gift back</p>

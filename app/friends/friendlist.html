@@ -1,0 +1,16 @@
+<div ng-include="'app/layout/header.html'"></div>
+
+<ol class="breadcrumb">
+  <li><a href="/#/home">Home</a></li>
+  <li class="active">Friends</li>
+</ol>
+
+<div ng-repeat="(id, f) in friend.users">
+  <table>
+    <tbody>
+      <tr>
+        <td>{{f.id}} <button class="btn btn-default">Wish List</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

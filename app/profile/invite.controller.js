@@ -14,4 +14,12 @@ function InviteController($http) {
       vm.users = data;
       console.log(data)
     });
+
+  vm.addFriend = function (id) {
+    $http
+      .post('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/friends.json', {id: id})
+      .success(function (data) {
+        console.log(data);
+      })
+  }
 }

@@ -14,23 +14,18 @@
     </div>
   </div>
   <p>To keep track of birthdays, wish lists, addresses and more, send your friends a request.</p>
-  <div class="search-results">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Send Friend Request</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat="i in invite.users
-          | filter:friendFilterQuery
-          | objToArr">
-          <td>{{i.profile}}</td>
-          <td>{{i._id}}</td>
-        </tr>
-      </tbody>
-    </table>
+  <br>
+  <div class="search-results row">
+    <div class="col-md-4">
+      <table class="table">
+        <tbody>
+          <tr ng-repeat="(id, i) in invite.users">
+            <td>{{i.profile.firstName}} {{i.profile.lastName}}</td>
+            <td><button class="btn btn-default" ng-click="invite.addFriend(id)">Add Friend</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
 </div>

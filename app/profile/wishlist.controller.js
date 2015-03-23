@@ -41,13 +41,13 @@ function WishController ($http) {
       });
   }
 
-  vm.fav = function (uuid) {
-    vm.newWish.fav = {'favorite': true };
+  // vm.fav = function (uuid) {
+  //   vm.newWish.fav = {'favorite': true };
 
-    $http
-      .post('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/wishlist/' + uuid + '.json', vm.newWish.fav)
-      .success(function (data) {
-        console.log(data);
-      });
-  }
+  //   $http
+  //     .post('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/wishlist/' + uuid + '.json', vm.newWish.fav)
+  //     .success(function (data) {
+  //       console.log(data);
+  //     });
+  // }
 }

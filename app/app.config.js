@@ -35,4 +35,9 @@ angular
       .when('/about', {
         templateUrl: 'app/layout/about.html'
       })
+      .when('/friends', {
+        templateUrl: 'app/friends/friendlist.html',
+        controller: 'FriendController',
+        controllerAs: 'friend'
+      })
   })
