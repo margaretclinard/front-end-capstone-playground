@@ -5,11 +5,11 @@
   <li class="active">Friends</li>
 </ol>
 
-<div ng-repeat="(id, f) in friend.users">
+<div class="friends-list">
   <table>
     <tbody>
-      <tr>
-        <td>{{f.id}} <button class="btn btn-default">Wish List</button></td>
+      <tr ng-repeat="f in friend.friends">
+        <td>{{f.uid}}<button ng-click="friend.getWishList(f.uid)" class="btn btn-default">Wish List</button></td>
       </tr>
     </tbody>
   </table>
