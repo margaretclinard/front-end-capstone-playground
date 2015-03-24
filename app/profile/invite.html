@@ -1,11 +1,12 @@
 <div ng-include="'app/layout/header.html'"></div>
-<ol class="breadcrumb">
+<ol class="breadcrumb nav">
   <li><a href="/#/home">Home</a></li>
-  <li class="active">Invite Friends</li>
+  <li class="active">Find Friends</li>
+  <button ng-click="invite.logout()" class="logout btn btn-default">Logout</button>
 </ol>
 
 <div class="row">
-  <div class="col-lg-4">
+  <div class="col-md-4">
     <div class="input-group">
       <input type="text" class="form-control" placeholder="Search for friends..." ng-model="friendFilterQuery">
       <span class="input-group-btn">
@@ -13,19 +14,19 @@
       </span>
     </div>
   </div>
-  <p>To keep track of birthdays, wish lists, addresses and more, send your friends a request.</p>
-  <br>
-  <div class="search-results row">
-    <div class="col-md-4">
-      <table class="table">
-        <tbody>
-          <tr ng-repeat="(id, i) in invite.users">
-            <td>{{i.profile.firstName}} {{i.profile.lastName}}</td>
-            <td><button class="btn btn-default" ng-click="invite.addFriend(id)">Add Friend</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
 </div>
+
+<div class="search-results row">
+  <div class="col-md-4">
+    <table class="table">
+      <tbody>
+        <tr ng-repeat="(id, invitee) in invite.users">
+          <td>{{invitee.profile.firstName}} {{invitee.profile.lastName}}</td>
+          <td><button class="btn btn-default" ng-click="invite.addFriend(id)">Add Friend</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- remove tr upon add friend click -->

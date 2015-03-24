@@ -1,14 +1,59 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
 @import url(http://fonts.googleapis.com/css?family=Dancing+Script);
 @import url(http://fonts.googleapis.com/css?family=Poiret+One);
-/*@import url(../icomoon.ttf);*/
 /*#D5C2A4 - tan
-
-#F7D579 - yellow
-
-#A2E7D0 - mint
-
 #f55649 - current coral*/
+
+
+/**** LANDING PAGE *****/
+.index {
+  width: 100%;
+}
+.index__header {
+  font-size: 10em;
+  font-family: 'Poiret One', sans-serif;
+  text-align: center;
+  color: #f55649;
+  width: 100%;
+}
+
+.index__button {
+  margin-left: 47%;
+  color: #f55649;
+  background-color: #D5C2A4;
+  border: 1px solid #f55649;
+}
+
+/***** BREAD CRUMB ******/
+.nav {
+  background-color: #D5C2A4;
+  border: 1px solid #f55649;
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  border-radius: 4px;
+  font-family: 'Poiret One', 'Open Sans';
+  font-size: 1.5em;
+}
+
+.nav > li > a {
+  color: #f55649;
+}
+
+.nav > li + li:before {
+  color: #f55649;
+}
+
+.nav > .active {
+  color: #f55649;
+}
+
+.nav > .logout {
+  float: right;
+  font-weight: bold;
+  color: #D5C2A4;
+  background-color: #f55649;
+}
 
 h1{
   font-family: 'Poiret One', 'Open Sans', cursive;
@@ -76,14 +121,6 @@ h1{
 .smallbox p {
   font-size: 2em;
 }
-
-/*.smallbox:first-child {
-  margin-left: 4%;
-}
-
-.smallbox:last-child {
-  margin-right: 4%;
-}*/
 
 .smallbox:hover {
   background-color: #fcc6c2;
@@ -195,7 +232,7 @@ h1{
   height: 20%;
   margin: 25px;
   border-radius: 1em;
-  border: 1px solid #f55649;
+  border: 4px solid #D5C2A4;
   display: inline-block;
   text-align: center;
   background-color: #f55649;
@@ -219,6 +256,49 @@ h1{
 }
 
 
+/********* FRIENDS LIST *********/
+.friend {
+  background-color: #f55649;
+  color: #D5C2A4;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  border-radius: 1em;
+  margin: 5px;
+/*  width: 20%;*/
+  border: 4px solid #D5C2A4;
+}
+
+/******** PROFILE PAGE ********/
+.nav-profile {
+  background-color: #f55649;
+  border: 1px solid #D5C2A4;
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  border-radius: 4px;
+  font-family: 'Poiret One', 'Open Sans';
+  font-size: 1.5em;
+}
+
+.nav-profile > li > a {
+  color: #D5C2A4;
+}
+
+.nav-profile > li + li:before {
+  color: #D5C2A4;
+}
+
+.nav-profile > .active {
+ color: #D5C2A4;
+}
+
+.nav-profile > .logout {
+  float: right;
+  font-weight: bold;
+  color: #f55649;
+  background-color: #D5C2A4;
+}
+
 /****** MEDIA QUERIES *******/
 @media screen and (max-width: 1000px) {
   .homepage__start {
@@ -227,13 +307,13 @@ h1{
     margin-left: 10px;
   }
 
-  .wishlist__fav, .fav {
+  .wishlist__fav {
     margin-left: 70%;
     color: lightgrey;
     margin-top: 5px;
   }
 
-  .wishlist__fav:hover {
+  .wishlist__fav:hover, .fav  {
     margin-left: 70%;
     color: #FDAB00;
     margin-top: 5px;

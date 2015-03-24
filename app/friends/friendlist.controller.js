@@ -2,7 +2,7 @@ angular
   .module('ps')
   .controller('FriendController', FriendController)
 
-function FriendController ($http) {
+function FriendController ($http, $rootScope, $scope, $location, authFactory) {
   var vm = this;
   var fb = new Firebase('https://presently-surprised.firebaseio.com/');
 
@@ -21,12 +21,11 @@ function FriendController ($http) {
     });
 
   vm.getWishList = function (uid) {
-    console.log('uid', uid);
-
     $http
       .get('https://presently-surprised.firebaseio.com/users/' + uid + '/wishlist.json')
       .success(function (data) {
         console.log(data);
+        vm.wishlist = data;
       })
   };
 
@@ -39,5 +38,26 @@ function FriendController ($http) {
         vm.friends[uuid] = data;
       });
   }
+
+  vm.deleteFriend = function (id) {
+    $http
+      .delete('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/friends/' + id + '.json')
+      .success(function (data) {
+        $http
+          .get('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/friends.json')
+          .success(function (data){
+            console.log(data);
+            location.reload(true);
+          });
+      });
+  }
+
+  vm.logout =   function () {
+    authFactory.logout(function () {
+      delete $rootScope.user;
+      $location.path('/login');
+      $scope.$apply();
+    });
+  };
 
 }

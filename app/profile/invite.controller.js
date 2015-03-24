@@ -2,7 +2,7 @@ angular
   .module('ps')
   .controller('InviteController', InviteController);
 
-function InviteController($http) {
+function InviteController($http, $rootScope, $scope, $location, authFactory) {
   var vm = this;
   var fb = new Firebase('https://presently-surprised.firebaseio.com/');
 
@@ -17,9 +17,18 @@ function InviteController($http) {
 
   vm.addFriend = function (id) {
     $http
-      .post('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/friends.json', {id: id})
+      .post('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/friends.json', {uid: id})
       .success(function (data) {
         console.log(data);
+        vm.friend = data;
       })
   }
+
+  vm.logout =   function () {
+    authFactory.logout(function () {
+      delete $rootScope.user;
+      $location.path('/login');
+      $scope.$apply();
+    });
+  };
 }

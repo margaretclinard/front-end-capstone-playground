@@ -2,6 +2,9 @@ angular
   .module ('ps')
   .config(function ($routeProvider) {
     $routeProvider
+      .when('/', {
+        templateUrl: 'app/landing.html'
+      })
       .when('/home', {
         templateUrl: 'app/profile/home.html',
         controller: 'HomeController',

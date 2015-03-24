@@ -1,7 +1,8 @@
 <div ng-include="'app/layout/header.html'"></div>
-<ol class="breadcrumb">
+<ol class="breadcrumb nav">
   <li><a href="/#/home">Home</a></li>
   <li class="active">My Wishlist</li>
+  <button ng-click="wish.logout()" class="logout btn btn-default">Logout</button>
 </ol>
 
 
@@ -41,19 +42,19 @@
 
 <!-- WISHLIST -->
 <div class="wishlist">
-  <button type="button" class="wishlist__add-item btn btn-default btn-lg col-md-12" data-toggle="modal" data-target="#myModal">
-   <span style="font-family: 'Dancing Script', cursive; font-size: 2em; color: #f55649;">add item</span>
-  </button>
-  <p>sort by: Favorite | Price</p>
+
+
   <div class="row">
     <div class="product" ng-repeat="(id, w) in wish.newWish">
-      <span ng-click="wish.fav(id)" class="wishlist__fav glyph glyphicon glyphicon-star" ng-class="{fav: w.favorite[id] === true}" aria-hidden="true"></span>
+      <span ng-click="wish.fav(id)" class="wishlist__fav glyph glyphicon glyphicon-star" ng-class="{fav: w.favorite === false}" aria-hidden="true"></span>
   <!--     <p>{{w.priority}}</p> -->
       <img class="wishlist__image" ng-src="{{w.itemImg}}">
       <p><a href="{{w.itemUrl}}" target="_blank">{{w.itemName}}</a></p>
       <p>${{w.price}}</span></p>
       <button ng-click="wish.deleteWish(id)" class="wishlist__remove btn btn-default"><span class="glyphicon glyphicon-remove"></span></button>
     </div>
+    <button type="button" class="wishlist__add-item btn btn-default col-md-12" data-toggle="modal" data-target="#myModal"><span style="font-family: 'Dancing Script', cursive; font-size: 2em; color: #f55649;">add item</span>
+    </button>
   </div>
 
 </div>

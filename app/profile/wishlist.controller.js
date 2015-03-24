@@ -2,9 +2,10 @@ angular
   .module('ps')
   .controller('WishController', WishController)
 
-function WishController ($http) {
+function WishController ($http, $routeParams, $rootScope, $scope, $location, authFactory) {
   var vm = this;
   var fb = new Firebase('https://presently-surprised.firebaseio.com/');
+  var uuid = $routeParams.id;
 
   vm.newWish = {};
 
@@ -15,9 +16,12 @@ function WishController ($http) {
     });
 
   vm.submit = function () {
+    vm.newWish.favorite = false;
+
     $http
       .post('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/wishlist.json', vm.newWish)
       .success(function (data) {
+        console.log(data)
         $http
           .get('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/wishlist.json')
           .success(function (data){
@@ -40,6 +44,14 @@ function WishController ($http) {
           });
       });
   }
+
+  vm.logout =   function () {
+    authFactory.logout(function () {
+      delete $rootScope.user;
+      $location.path('/login');
+      $scope.$apply();
+    });
+  };
 
   // vm.fav = function (uuid) {
   //   vm.newWish.fav = {'favorite': true };

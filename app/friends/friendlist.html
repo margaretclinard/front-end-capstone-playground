@@ -1,16 +1,40 @@
 <div ng-include="'app/layout/header.html'"></div>
 
-<ol class="breadcrumb">
+<ol class="breadcrumb nav">
   <li><a href="/#/home">Home</a></li>
   <li class="active">Friends</li>
+  <button ng-click="friend.logout()" class="logout btn btn-default">Logout</button>
 </ol>
 
 <div class="friends-list">
-  <table>
-    <tbody>
-      <tr ng-repeat="f in friend.friends">
-        <td>{{f.uid}}<button ng-click="friend.getWishList(f.uid)" class="btn btn-default">Wish List</button></td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="row">
+    <div class="col-md-2 friend" ng-repeat="(id, f) in friend.friends">
+      <p>{{f.profile.firstName}} {{f.profile.lastName}}</p>
+      <p>{{f.profile.street}}</p>
+      <p>{{f.profile.city}}</p>
+      <p>{{f.profile.email}}</p>
+
+      <button ng-click="friend.getWishList(f.uid)" class="btn btn-default" data-toggle="modal" data-target="#wishlistModal">Wish List</button>
+      <button ng-click="friend.deleteFriend(id)" class="wishlist__remove btn btn-default"><span class="glyphicon glyphicon-remove"></span></button>
+    </div>
+  </div>
+</div>
+
+<div class="homepage__footer col-md-12">
+  <p>You <span style="font-family: 'Dancing Script', cursive; font-size: 1.5em; color: #f55649;">get</span> what you <span style="font-family: 'Dancing Script', cursive; font-size: 1.5em; color: #f55649;">gift</span>.</p>
+</div>
+
+<!-- MODAL -->
+<div class="modal fade" id="wishlistModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="myModalLabel">{{friend.friends.profile.firstName}}'s wishlist</h1>
+      </div>
+      <div class="modal-body">
+        <p>{{friend.wishlist}}</p>
+      </div>
+    </div>
+  </div>
 </div>

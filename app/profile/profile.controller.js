@@ -2,7 +2,7 @@ angular
   .module('ps')
   .controller('ProfileController', ProfileController)
 
-function ProfileController ($http) {
+function ProfileController ($http, $rootScope, $scope, $location, authFactory) {
   var vm = this;
   var fb = new Firebase('https://presently-surprised.firebaseio.com/');
 
@@ -22,4 +22,12 @@ function ProfileController ($http) {
       })
     $('#editModal').modal('hide')
   }
+
+  vm.logout =   function () {
+    authFactory.logout(function () {
+      delete $rootScope.user;
+      $location.path('/login');
+      $scope.$apply();
+    });
+  };
 }
