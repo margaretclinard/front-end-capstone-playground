@@ -163,7 +163,6 @@ h1{
   margin: auto;
   width: 55%;
   height: 300px;
-  border: 1px solid black;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   color: #f55649;
@@ -198,7 +197,7 @@ h1{
 
 .wishlist__add-item {
   background-color: #D5C2A4;
-  border: 4px solid #f55649;
+  border: 1px solid #f55649;
   margin-left: auto;
 }
 
@@ -232,7 +231,7 @@ h1{
   height: 20%;
   margin: 25px;
   border-radius: 1em;
-  border: 4px solid #D5C2A4;
+  border: 1px solid #D5C2A4;
   display: inline-block;
   text-align: center;
   background-color: #f55649;
@@ -262,13 +261,24 @@ h1{
   color: #D5C2A4;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  border-radius: 1em;
-  margin: 5px;
-/*  width: 20%;*/
-  border: 4px solid #D5C2A4;
+  border-radius: .5em;
+  margin: 27px;
+  width: 20%;
+  border: 1px solid #D5C2A4;
 }
 
+.friend button {
+  color: #f55649;
+  background-color: #D5C2A4;
+  font-family: 'Poiret One', 'Open Sans';
+  font-weight: bold;
+  margin-bottom: 2px;
+}
 /******** PROFILE PAGE ********/
+.plain-profile {
+  display: none;
+}
+
 .nav-profile {
   background-color: #f55649;
   border: 1px solid #D5C2A4;
@@ -299,8 +309,35 @@ h1{
   background-color: #D5C2A4;
 }
 
+.envelope button {
+  color: #D5C2A4;
+  background-color: #f55649;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
 /****** MEDIA QUERIES *******/
 @media screen and (max-width: 1000px) {
+  .plain-profile {
+    display: block;
+    background-color: #D5C2A4;
+    color: #f55649;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    border-radius: .5em;
+    margin: 27px;
+    width: 85%;
+    border: 1px solid #D5C2A4;
+  }
+
+  .plain-profile button {
+    color: #D5C2A4;
+    background-color: #f55649;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+
   .homepage__start {
     width: 97%;
     background-color: #D5C2A4;
