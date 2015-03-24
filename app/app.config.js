@@ -3,7 +3,9 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'app/landing.html'
+        templateUrl: 'app/landing.html',
+        controller: 'AuthController',
+        controllerAs: 'auth'
       })
       .when('/home', {
         templateUrl: 'app/profile/home.html',

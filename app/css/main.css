@@ -18,7 +18,7 @@
 }
 
 .index__button {
-  margin-left: 47%;
+  margin-left: 45%;
   color: #f55649;
   background-color: #D5C2A4;
   border: 1px solid #f55649;
@@ -237,6 +237,15 @@ h1{
   background-color: #f55649;
 }
 
+.product a {
+  color: #D5C2A4;
+  text-decoration: underline;
+}
+
+.product button {
+  background-color: #D5C2A4;
+}
+
 .wishlist__remove {
   color: red;
   margin-bottom: 5px;
@@ -273,6 +282,24 @@ h1{
   font-family: 'Poiret One', 'Open Sans';
   font-weight: bold;
   margin-bottom: 2px;
+}
+
+.friend__wishlist {
+  list-style: none;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.friend__wishlist li {
+  padding: 5px;
+}
+
+.friend__wishlist a {
+  color: #f55649;
+}
+
+.friend__wishlist--modal{
+  padding: 0px;
 }
 /******** PROFILE PAGE ********/
 .plain-profile {

@@ -16,6 +16,8 @@ function AuthController($rootScope, $http, $scope, $location, authFactory) {
         $rootScope.user = authData;
         $location.path('/home');
         $scope.$apply();
+        $('#loginModal').modal('hide');
+        location.reload(true);
       }
     });
   };
