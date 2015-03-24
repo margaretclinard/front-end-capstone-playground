@@ -12,7 +12,6 @@ function InviteController($http, $rootScope, $scope, $location, authFactory) {
     .get('https://presently-surprised.firebaseio.com/users.json')
     .success(function (data){
       vm.users = data;
-      console.log(data)
     });
 
   vm.addFriend = function (id) {

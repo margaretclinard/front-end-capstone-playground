@@ -45,11 +45,6 @@ function AuthController($rootScope, $http, $scope, $location, authFactory) {
           .success(function (data) {
             vm.user = data;
           });
-        // $http
-        //   .post('https://presently-surprised.firebaseio.com/names/' + authData.uid + '/name.json', vm.user.lastName)
-        //   .success(function (data) {
-        //     vm.user.lastName = data;
-        //   });
       }
     });
   };

@@ -6,14 +6,12 @@
 </ol>
 
 <div class="birthdays">
-  <h2>March Birthdays</h2>
+  <p><span style="font-family: 'Dancing Script', cursive; font-size: 2em; color: #f55649;">March Birthdays</span></p>
   <table>
     <tbody>
-      <tr ng-repeat="b in bday.data">
-        <td>{{b.birthday}}</td>
-        <td>{{b.name}}</td>
-        <td>{{b.address}}</td>
-        <td><button class="btn btn-default">Wish List</button></td>
+      <tr ng-repeat="b in bday.friends">
+        <td>{{b.profile.birthday}}</td>
+        <td>{{b.profile.firstName}} {{b.profile.lastName}}</td>
       </tr>
     </tbody>
   </table>
