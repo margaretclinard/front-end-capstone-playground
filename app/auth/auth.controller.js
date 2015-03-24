@@ -7,6 +7,13 @@ function AuthController($rootScope, $http, $scope, $location, authFactory) {
 
   vm.user = {};
 
+  $( "#datepicker" ).datepicker({
+    changeMonth: true,
+    showButtonPanel: true,
+    dateFormat: 'MM d'
+  });
+
+
   vm.login = function () {
     authFactory.login(vm.user, function (err, authData) {
       if (err) {

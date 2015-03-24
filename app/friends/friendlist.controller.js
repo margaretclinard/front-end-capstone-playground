@@ -24,7 +24,6 @@ function FriendController ($http, $rootScope, $scope, $location, authFactory) {
     $http
       .get('https://presently-surprised.firebaseio.com/users/' + uid + '/wishlist.json')
       .success(function (data) {
-        console.log(data);
         vm.wishlist = data;
       })
   };
