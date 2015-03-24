@@ -42,10 +42,8 @@
 
 <!-- WISHLIST -->
 <div class="wishlist">
-
-
   <div class="row">
-    <div class="product" ng-repeat="(id, w) in wish.newWish">
+    <div class="product" ng-repeat="(id, w) in wish.wishes">
       <span ng-click="wish.fav(id)" class="wishlist__fav glyph glyphicon glyphicon-star" ng-class="{fav: w.favorite === false}" aria-hidden="true"></span>
   <!--     <p>{{w.priority}}</p> -->
       <img class="wishlist__image" ng-src="{{w.itemImg}}">

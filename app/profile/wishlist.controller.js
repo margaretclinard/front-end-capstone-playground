@@ -12,7 +12,7 @@ function WishController ($http, $routeParams, $rootScope, $scope, $location, aut
   $http
     .get('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/wishlist.json')
     .success(function (data){
-      vm.newWish = data;
+      vm.wishes = data;
     });
 
   vm.submit = function () {
@@ -21,11 +21,10 @@ function WishController ($http, $routeParams, $rootScope, $scope, $location, aut
     $http
       .post('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/wishlist.json', vm.newWish)
       .success(function (data) {
-        console.log(data)
         $http
           .get('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/wishlist.json')
           .success(function (data){
-            vm.newWish = data;
+            vm.wishes = data;
           });
         $('#myModal').modal('hide')
       });
@@ -40,7 +39,7 @@ function WishController ($http, $routeParams, $rootScope, $scope, $location, aut
         $http
           .get('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/wishlist.json')
           .success(function (data){
-            vm.newWish = data;
+            vm.wishes = data;
           });
       });
   }
