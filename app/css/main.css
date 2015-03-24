@@ -345,6 +345,11 @@ h1{
 }
 /****** MEDIA QUERIES *******/
 @media screen and (max-width: 1000px) {
+  .friend {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 10px;
+  }
   .plain-profile {
     display: block;
     background-color: #D5C2A4;
