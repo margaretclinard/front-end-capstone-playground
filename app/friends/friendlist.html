@@ -30,7 +30,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h1 class="modal-title" id="myModalLabel">{{friend.friends.profile.firstName}}'s wishlist</h1>
+        <h1 class="modal-title" id="myModalLabel">{{friend.profile.firstName}} {{friend.profile.lastName}}'s Wishlist</h1>
       </div>
 <!--       <p>sort by: Price</p> -->
       <div class="modal-body friend__wishlist--modal" ng-repeat="(id, f) in friend.wishlist">

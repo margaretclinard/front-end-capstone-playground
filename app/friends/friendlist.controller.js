@@ -26,6 +26,11 @@ function FriendController ($http, $rootScope, $scope, $location, authFactory) {
       .success(function (data) {
         vm.wishlist = data;
       })
+    $http
+      .get('https://presently-surprised.firebaseio.com/users/' + uid + '/profile.json')
+      .success(function (data) {
+        vm.profile = data;
+      })
   };
 
   function friendPop(uuid, uid) {
