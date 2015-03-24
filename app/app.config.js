@@ -15,7 +15,7 @@ angular
         controller: 'BdayController',
         controllerAs: 'bday'
       })
-      .when('/wishlist', {
+      .when('/:uuid/wishlist', {
         templateUrl: 'app/profile/wishlist.html',
         controller: 'WishController',
         controllerAs: 'wish'
