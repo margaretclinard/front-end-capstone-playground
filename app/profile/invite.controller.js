@@ -27,7 +27,7 @@ function InviteController($http, $rootScope, $scope, $location, authFactory) {
   vm.logout =   function () {
     authFactory.logout(function () {
       delete $rootScope.user;
-      $location.path('/login');
+      $location.path('/');
       $scope.$apply();
     });
   };
