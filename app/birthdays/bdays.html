@@ -6,13 +6,8 @@
 </ol>
 
 <div class="birthdays">
-  <p><span style="font-family: 'Dancing Script', cursive; font-size: 2em; color: #f55649;">March Birthdays</span></p>
-  <table>
-    <tbody>
-      <tr ng-repeat="b in bday.friends">
-        <td>{{b.profile.birthday}}</td>
-        <td>{{b.profile.firstName}} {{b.profile.lastName}}</td>
-      </tr>
-    </tbody>
-  </table>
+  <h2>Birthdays</h2>
+  <div ng-repeat="f in bday.friends | objToArr | orderBy:'profile.bdayMonth'">
+    <p>{{f.profile.birthday}} - {{f.profile.firstName}} {{f.profile.lastName}}</p>
+  </div>
 </div>
