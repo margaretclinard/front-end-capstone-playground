@@ -5,9 +5,16 @@
   <button ng-click="bday.logout()" class="logout btn btn-default">Logout</button>
 </ol>
 
-<div class="birthdays">
-  <h2>Birthdays</h2>
-  <div ng-repeat="f in bday.friends | objToArr | orderBy:'profile.bdayMonth'">
-    <p>{{f.profile.birthday}} - {{f.profile.firstName}} {{f.profile.lastName}}</p>
+<div class="row">
+  <div class="birthdays">
+    <h1>birthdays</h1>
+    <table class="col-md-5 col-md-offset-4">
+      <tbody>
+        <tr ng-repeat="f in bday.friends | objToArr | orderBy:'profile.bdayMonth'">
+          <td>{{f.profile.birthday}}</td>
+          <td>{{f.profile.firstName}} {{f.profile.lastName}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>

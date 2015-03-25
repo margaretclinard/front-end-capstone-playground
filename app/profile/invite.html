@@ -15,14 +15,14 @@
     </div>
   </div>
 </div> -->
-
+<h1 style="text-align: center;">add friends</h1>
 <div class="search-results row">
-  <div class="col-md-4">
+  <div class="col-md-4 col-md-offset-4">
     <table class="table">
       <tbody>
         <tr ng-repeat="(id, invitee) in invite.users">
           <td>{{invitee.profile.firstName}} {{invitee.profile.lastName}}</td>
-          <td><button class="btn btn-default" ng-click="invite.addFriend(id)">Add Friend</button></td>
+          <td><button class="btn btn-default" ng-click="invite.addFriend(id)">Add</button></td>
         </tr>
       </tbody>
     </table>

@@ -6,13 +6,17 @@
   <button ng-click="friend.logout()" class="logout btn btn-default">Logout</button>
 </ol>
 
+<h1 style="text-align: center">my friends</h1>
 <div class="friends-list">
   <div class="row">
     <div class="col-md-2 friend" ng-repeat="(id, f) in friend.friends">
       <p>{{f.profile.firstName}} {{f.profile.lastName}}</p>
       <p>{{f.profile.street}}</p>
       <p>{{f.profile.city}}</p>
-      <p>{{f.profile.email}}</p>
+      <hr>
+      <p>Email: {{f.profile.email}}</p>
+      <p>Birthday: {{f.profile.birthday}}</p>
+
 
       <button ng-click="friend.getWishList(f.uid)" class="btn btn-default" data-toggle="modal" data-target="#wishlistModal">Wish List</button>
       <button ng-click="friend.deleteFriend(id)" class="wishlist__remove btn btn-default"><span class="glyphicon glyphicon-remove"></span></button>

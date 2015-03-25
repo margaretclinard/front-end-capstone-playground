@@ -192,12 +192,58 @@ h1{
   margin-top: 20%;
 }
 
+/***** FIND FRIENDS PAGE ******/
+.search-results table {
+  background-color: #f55649;
+  color: #D5C2A4;
+  text-align: center;
+  border-radius: .5em;
+  font-size: 1.5em;
+}
+
+.search-results button {
+  font-weight: bold;
+  color: #f55649;
+  background-color: #D5C2A4;
+  font-family: 'Poiret One', 'Open Sans';
+}
+
 /***** WISHLIST PAGE *****/
+
+.nav-wishlist  {
+  background-color: #f55649;
+  border: 1px solid #D5C2A4;
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  border-radius: 4px;
+  font-family: 'Poiret One', 'Open Sans', sans-serif;
+  font-size: 1.5em;
+}
+
+.nav-wishlist  > li > a {
+  color: #D5C2A4;
+}
+
+.nav-wishlist  > li + li:before {
+  color: #D5C2A4;
+}
+
+.nav-wishlist  > .active {
+ color: #D5C2A4;
+}
+
+.nav-wishlist  > .logout {
+  float: right;
+  font-weight: bold;
+  color: #f55649;
+  background-color: #D5C2A4;
+}
 
 .wishlist__add-item {
   background-color: #D5C2A4;
   border: 1px solid #f55649;
-  margin-left: auto;
+  margin-left: 8%;
 }
 
 .wishlist__image {
@@ -256,16 +302,17 @@ h1{
   font-weight: bold;
   font-size: 2em;
   color: #f55649;
-  text-align: center;
 }
 
-.birthdays h2 {
-  font-family: 'Open Sans', sans-serif;
+.birthdays h1 {
+  text-align: center;
 }
 
 
 /********* FRIENDS LIST *********/
 .friend {
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: #f55649;
   color: #D5C2A4;
   font-family: 'Open Sans', sans-serif;
@@ -382,14 +429,14 @@ h1{
     margin-top: 5px;
   }
 
-  .wishlist__fav:hover, .fav  {
+  .wishlist__fav:hover {
     margin-left: 70%;
     color: #FDAB00;
     margin-top: 5px;
   }
 
   .wishlist__add-item {
-    width: 100%;
+    width: 82%;
   }
 
   .product {
@@ -475,10 +522,6 @@ h1{
     margin-left: 80%;
     color: #FDAB00;
     margin-top: 5px;
-  }
-
-  .wishlist__add-item {
-    width: 100%;
   }
 
   .product {
