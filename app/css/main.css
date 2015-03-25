@@ -391,30 +391,11 @@ h1{
   margin-bottom: 2px;
 }
 /****** MEDIA QUERIES *******/
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1198px) {
   .friend {
     width: 60%;
     margin: auto;
     margin-bottom: 10px;
-  }
-  .plain-profile {
-    display: block;
-    background-color: #D5C2A4;
-    color: #f55649;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    border-radius: .5em;
-    margin: 27px;
-    width: 85%;
-    border: 1px solid #D5C2A4;
-  }
-
-  .plain-profile button {
-    color: #D5C2A4;
-    background-color: #f55649;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    margin-bottom: 2px;
   }
 
   .homepage__start {
@@ -448,10 +429,6 @@ h1{
     text-align: center;
   }
 
-  .envelope {
-    display: none;
-  }
-
   .register__form {
     float: none;
     margin: auto;
@@ -468,16 +445,11 @@ h1{
     width: 275px;
     height: 210px;
     padding-top: 5px;
-    margin: auto;
     margin-bottom: 10px;
     border-radius: 1em;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     color: #D5C2A4;
-  }
-
-  .birthday__highlight:hover {
-    background-color: #fcc6c2;
   }
 
   .smallbox {
@@ -497,10 +469,6 @@ h1{
     font-size: 1.5em;
   }
 
-  .smallbox:hover {
-    background-color: #fcc6c2;
-  }
-
   .glyph {
     font-size: 4em;
   }
@@ -510,7 +478,39 @@ h1{
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 992px) {
+  .welcome {
+    display: none;
+  }
+
+  .envelope {
+    display: none;
+  }
+
+  .homepage__start {
+    display: none;
+  }
+
+  .plain-profile {
+    display: block;
+    background-color: #D5C2A4;
+    color: #f55649;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    border-radius: .5em;
+    margin: 27px;
+    width: 85%;
+    border: 1px solid #D5C2A4;
+  }
+
+  .plain-profile button {
+    color: #D5C2A4;
+    background-color: #f55649;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+
   .wishlist__fav, .fav {
     font-size: 2em;
     margin-left: 80%;
@@ -535,7 +535,7 @@ h1{
 
   .birthday__highlight {
     background-color: #f55649;
-    padding-top: 0px;
+    padding-bottom: 15px;
     width: 60%;
     height: 30%;
     margin: auto;
@@ -546,16 +546,12 @@ h1{
     color: #D5C2A4;
   }
 
-  .birthday__highlight:hover {
-    background-color: #fcc6c2;
-  }
-
   .smallbox {
     background-color: #f55649;
     color: #D5C2A4;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
-    height: 50px;
+    height: 60px;
     border-radius: 1em;
     margin-bottom: 10px;
     margin-right: 10px;
@@ -564,10 +560,6 @@ h1{
 
   .smallbox p {
     font-size: 1em;
-  }
-
-  .smallbox:hover {
-    background-color: #fcc6c2;
   }
 
   .glyph {
