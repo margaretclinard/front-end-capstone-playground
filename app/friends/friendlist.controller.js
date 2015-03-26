@@ -37,7 +37,6 @@ function FriendController ($http, $rootScope, $scope, $location, authFactory) {
     $http
       .get('https://presently-surprised.firebaseio.com/users/' + uid + '.json')
       .success(function (data){
-        console.log('friends', data);
         data.uid = uid;
         vm.friends[uuid] = data;
       });
@@ -50,7 +49,6 @@ function FriendController ($http, $rootScope, $scope, $location, authFactory) {
         $http
           .get('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/friends.json')
           .success(function (data){
-            console.log(data);
             location.reload(true);
           });
       });
