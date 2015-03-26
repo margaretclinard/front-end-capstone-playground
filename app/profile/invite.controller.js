@@ -8,30 +8,41 @@ function InviteController($http, $rootScope, $scope, $location, authFactory) {
 
   vm.users = {};
   vm.currentFriends = [];
+  getPossibleFriends();
 
-
-  $http
-    .get('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/possibleFriends.json')
-    .success(function (data){
-      vm.possibleFriends = Object.keys(data);
+  function getPossibleFriends () {
+    $http
+      .get('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/friends.json')
+      .success(function (data){
+        console.log('vm.friends', data)
+        vm.friends = data;
+        Object.keys(data).forEach(function (key) {
+          friendPop(key, data[key].uid);
+          vm.currentFriends.push(data[key].uid);
+        });
       $http
-        .get('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/friends.json')
+        .get('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/possibleFriends.json')
         .success(function (data){
-          vm.friends = data;
-          Object.keys(data).forEach(function (key) {
-            friendPop(key, data[key].uid);
-            vm.currentFriends.push(data[key].uid);
-          });
+          vm.possibleFriends = Object.keys(data);
+          // for(i = 0; i < vm.currentFriends.length; i++){
+          //   delete vm.possibleFriends[i];
+          // };
           for(i = 0; i < vm.currentFriends.length; i++){
-            // console.log(vm.possibleFriends);
-            delete vm.possibleFriends[i];
-            // console.log(vm.possibleFriends)
+            $http
+              .delete('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/possibleFriends/' + vm.possibleFriends[i] + '.json')
+              .success(function (data){
+              })
           };
         })
-        .then(function (res){
-          console.log(res);
+        .then(function (){
+          $http
+            .get('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/possibleFriends.json')
+            .success(function (data){
+              vm.users=data;
+            })
         })
-    });
+      });
+  }
 
   vm.addFriend = function (id) {
     $http
@@ -48,23 +59,6 @@ function InviteController($http, $rootScope, $scope, $location, authFactory) {
       $scope.$apply();
     });
   };
-
-  // //DISPLAY ONLY PEOPLE WHO ARE NOT YOUR FRIEND
-//   $http
-//     .get('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/friends.json')
-//     .success(function (data){
-//       vm.friends = data;
-//     })
-//     .then(function (res) {
-//       // console.log(res.data);
-//       vm.friendsArr = [];
-//       Object.keys(res.data).forEach(function (key) {
-//         friendPop(key, res.data[key].uid)
-//         // vm.myFriends.push(res.data[key].uid);
-//         // console.log(vm.myFriends);
-//       });
-//       vm.friendsArr.push(vm.myFriends);
-//     });
 
   function friendPop(uuid, uid) {
     $http

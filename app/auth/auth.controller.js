@@ -30,7 +30,7 @@ function AuthController($rootScope, $http, $scope, $location, authFactory) {
             $http
               .put('https://presently-surprised.firebaseio.com/users/' + authData.uid + '/possibleFriends.json', data)
               .success(function (data){
-                // console.log('possible friends', data);
+                console.log('possible friends', data);
               })
           })
         // location.reload(true);
