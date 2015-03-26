@@ -22,17 +22,17 @@ function AuthController($rootScope, $http, $scope, $location, authFactory) {
         $rootScope.user = authData;
         $location.path('/home');
         $scope.$apply();
-        $('#loginModal').modal('hide');
         $http
           .get('https://presently-surprised.firebaseio.com/users.json')
           .success(function (data){
-            console.log(data);
+            $rootScope.user.possibleFriends = data;
             $http
               .put('https://presently-surprised.firebaseio.com/users/' + authData.uid + '/possibleFriends.json', data)
               .success(function (data){
                 console.log('possible friends', data);
               })
           })
+        $('#loginModal').modal('hide');
         // location.reload(true);
       }
     });
