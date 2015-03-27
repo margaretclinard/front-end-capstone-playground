@@ -21,18 +21,8 @@ function AuthController($rootScope, $http, $scope, $location, authFactory) {
         console.log('Logged in successfully', authData);
         $rootScope.user = authData;
         $location.path('/home');
-        $scope.$apply();
-        $http
-          .get('https://presently-surprised.firebaseio.com/users.json')
-          .success(function (data){
-            $rootScope.user.possibleFriends = data;
-            $http
-              .put('https://presently-surprised.firebaseio.com/users/' + authData.uid + '/possibleFriends.json', data)
-              .success(function (data){
-                console.log('possible friends', data);
-              })
-          })
         $('#loginModal').modal('hide');
+        $scope.$apply();
         // location.reload(true);
       }
     });
@@ -50,11 +40,10 @@ function AuthController($rootScope, $http, $scope, $location, authFactory) {
         vm.login();
         delete vm.user['password'];
         vm.user.birthdayTime = new Date(vm.user.birthday);
-        vm.user.uid = authData.uid;
         $http
           .put('https://presently-surprised.firebaseio.com/users/' + authData.uid + '/profile.json', vm.user)
           .success(function (data) {
-            vm.user = data;
+            // vm.user = data;
           });
       }
     });

@@ -5,8 +5,7 @@ angular
       .when('/', {
         templateUrl: 'app/landing.html',
         controller: 'AuthController',
-        controllerAs: 'auth',
-        private: true
+        controllerAs: 'auth'
       })
       .when('/home', {
         templateUrl: 'app/profile/home.html',

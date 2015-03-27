@@ -44,11 +44,11 @@ function privateRoutes($rootScope, $location, authFactory, $http) {
         $rootScope.user.currentFriends  = _.map(_.values(data[$rootScope.user.uid].friends), function(obj) {
           return obj.uid;
         })
-        $rootScope.user.possibleFriends = _.omit($rootScope.user.allUsers, $rootScope.user.currentFriends);
+        $rootScope.user.possibleFriends = _.omit($rootScope.user.allUsers, $rootScope.user.currentFriends, authFactory.getAuth().uid);
       })
 
     if (loginRequired()) {
-      $location.path('/login');
+      $location.path('/');
     }
 
     function loginRequired() {

@@ -49,7 +49,12 @@ function FriendController ($http, $rootScope, $scope, $location, authFactory) {
         $http
           .get('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/friends.json')
           .success(function (data){
-            location.reload(true);
+            vm.friends = data;
+          })
+          .then(function (res) {
+            Object.keys(res.data).forEach(function (key) {
+              friendPop(key, res.data[key].uid)
+            });
           });
       });
   }
