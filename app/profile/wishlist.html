@@ -23,7 +23,7 @@
           <input type="url" ng-model="wish.newWish.itemUrl" class="form-control" placeholder="Enter link to your item"required>
           <br>
           <label>Image URL:</label>
-          <input ng-model="wish.newWish.itemImg" class="form-control" placeholder="Enter image URL" required>
+          <input type="url" ng-model="wish.newWish.itemImg" class="form-control" placeholder="Enter image URL" required>
           <br>
           <label>Item Price:</label>
           <input ng-model="wish.newWish.price" class="form-control" placeholder="Enter the item price" required>
@@ -41,11 +41,12 @@
     <button type="button" class="wishlist__add-item btn btn-default col-md-10" data-toggle="modal" data-target="#myModal"><span style="font-family: 'Dancing Script', cursive; font-size: 2em; color: #f55649;">add item</span>
     </button>
     <div class="product" ng-repeat="(id, w) in wish.wishes">
-      <span ng-click="wish.fav(id)" class="wishlist__fav glyph glyphicon glyphicon-star" ng-class="{fav: w.favorite === false}" aria-hidden="true"></span>
-  <!--     <p>{{w.priority}}</p> -->
-      <img class="wishlist__image" ng-src="{{w.itemImg}}">
-      <p><a href="{{w.itemUrl}}" target="_blank">{{w.itemName}}</a></p>
-      <p>${{w.price}}</span></p>
+      <a href="{{w.itemUrl}}" target="_blank">
+        <div>
+          <img class="wishlist__image" ng-src="{{w.itemImg}}">
+          <p>{{w.itemName}}, ${{w.price}}</p>
+        </div>
+      </a>
       <button ng-click="wish.deleteWish(id)" class="wishlist__remove btn btn-default"><span class="glyphicon glyphicon-remove"></span></button>
     </div>
 

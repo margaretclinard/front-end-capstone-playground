@@ -8,7 +8,7 @@
 <div class="row">
   <div class="birthdays">
     <h1>birthdays</h1>
-    <table class="col-md-5 col-md-offset-4">
+    <table class="col-md-5 col-md-offset-4 col-sm-8 col-sm-offset-3">
       <tbody>
         <tr ng-repeat="f in bday.friends | objToArr | orderBy:'profile.birthdayTime'">
           <td>{{f.profile.birthday}}</td>
