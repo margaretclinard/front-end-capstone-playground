@@ -21,9 +21,8 @@ function AuthController($rootScope, $http, $scope, $location, authFactory) {
         console.log('Logged in successfully', authData);
         $rootScope.user = authData;
         $location.path('/home');
-        $('#loginModal').modal('hide');
         $scope.$apply();
-        // location.reload(true);
+        location.reload(true);
       }
     });
   };
@@ -43,7 +42,7 @@ function AuthController($rootScope, $http, $scope, $location, authFactory) {
         $http
           .put('https://presently-surprised.firebaseio.com/users/' + authData.uid + '/profile.json', vm.user)
           .success(function (data) {
-            // vm.user = data;
+            vm.user = data;
           });
       }
     });

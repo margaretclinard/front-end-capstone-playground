@@ -11,6 +11,7 @@ function InviteController($http, $rootScope, $scope, $location, authFactory) {
       .post('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/friends.json', {uid: id})
       .success(function (data) {
         vm.friend = data;
+        location.reload(true);
       })
   }
 
