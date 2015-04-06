@@ -10,9 +10,9 @@
   <div class="col-md-4 col-md-offset-4">
     <table class="table">
       <tbody>
-        <tr ng-hide="added" ng-repeat="(id, friend) in user.possibleFriends">
+        <tr ng-repeat="(id, friend) in user.possibleFriends">
           <td>{{friend.profile.firstName}} {{friend.profile.lastName}}</td>
-          <td><button class="invite__add btn btn-default" ng-click="invite.addFriend(id)" ng-model="added">Add</button></td>
+          <td><button class="invite__add btn btn-default" ng-click="invite.addFriend(id)">Add</button></td>
         </tr>
       </tbody>
     </table>
