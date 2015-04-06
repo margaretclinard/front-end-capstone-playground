@@ -8,6 +8,7 @@
 .index {
   width: 100%;
 }
+
 .index__header {
   font-size: 10em;
   font-family: 'Poiret One', sans-serif;
@@ -66,7 +67,6 @@ h1{
 }
 
 /*****  HOME PAGE ******/
-
 .home__start--modal p {
   font-size: 1.5em;
   color: #f55649;
@@ -223,8 +223,8 @@ h1{
 .invite__add--clicked {
   background-color: green;
 }
-/***** WISHLIST PAGE *****/
 
+/***** WISHLIST PAGE *****/
 .nav-wishlist  {
   background-color: #f55649;
   border: 1px solid #D5C2A4;
@@ -300,8 +300,8 @@ h1{
   color: red;
   margin-bottom: 5px;
 }
-/***** BIRTHDAYS PAGE ******/
 
+/***** BIRTHDAYS PAGE ******/
 .birthdays {
   font-family: 'Poiret One', sans-serif;
   font-weight: bold;
@@ -314,7 +314,7 @@ h1{
 }
 
 
-/********* FRIENDS LIST *********/
+/****** FRIENDS LIST ******/
 .friend {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -355,7 +355,7 @@ h1{
 .friend__wishlist--modal{
   padding: 0px;
 }
-/******** PROFILE PAGE ********/
+/****** PROFILE PAGE ******/
 .plain-profile {
   display: none;
 }
@@ -397,7 +397,7 @@ h1{
   font-weight: bold;
   margin-bottom: 2px;
 }
-/****** MEDIA QUERIES *******/
+/****** MEDIA QUERIES ******/
 @media screen and (max-width: 1198px) {
   .friend {
     width: 60%;
