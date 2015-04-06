@@ -10,12 +10,14 @@
 <div class="friends-list">
   <div class="row">
     <div class="col-md-2 friend" ng-repeat="(id, f) in friend.friends">
-      <p>{{f.profile.firstName}} {{f.profile.lastName}}</p>
-      <p>{{f.profile.street}}</p>
-      <p>{{f.profile.city}}</p>
-      <hr>
-      <p>{{f.profile.email}}</p>
-      <p>Birthday: {{f.profile.birthday}}</p>
+      <address>
+        {{f.profile.firstName}} {{f.profile.lastName}}<br>
+        {{f.profile.street}}<br>
+        {{f.profile.city}}<br>
+        <hr>
+        <a href="mailto:{{f.profile.email}}">{{f.profile.email}}</a><br>
+        Birthday: {{f.profile.birthday}}
+      </address>
 
 
       <button ng-click="friend.getWishList(f.uid)" class="btn btn-default" data-toggle="modal" data-target="#wishlistModal">wishlist</button>
