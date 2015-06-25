@@ -51,14 +51,4 @@ function WishController ($http, $routeParams, $rootScope, $scope, $location, aut
       $scope.$apply();
     });
   };
-
-  // vm.fav = function (uuid) {
-  //   vm.newWish.fav = {'favorite': true };
-
-  //   $http
-  //     .post('https://presently-surprised.firebaseio.com/users/' + fb.getAuth().uid + '/wishlist/' + uuid + '.json', vm.newWish.fav)
-  //     .success(function (data) {
-  //       console.log(data);
-  //     });
-  // }
 }
